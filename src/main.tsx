@@ -11,8 +11,20 @@ import { FormCustomHook } from './02-UseEffect/FormCustomHook';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 
+  <React.StrictMode>
 
+  {/* <HooksApp  />
+ 
+  <CounterApp></CounterApp>
+
+  <CounterCustomHook name='Super'></CounterCustomHook>
+  */}
+
+  {/* <SimpleForm></SimpleForm> */}
 
   <FormCustomHook></FormCustomHook>,
+   
+   </React.StrictMode>,
+   
 
 ) 
