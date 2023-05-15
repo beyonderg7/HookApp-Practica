@@ -25,7 +25,7 @@ const formulario:CustomForm = {
 }
 
 
-  const {formState, onInputChange} = useForm<CustomForm>(formulario);
+  const {formState, onInputChange, OnResetForm} = useForm<CustomForm>(formulario);
 
 
   const {username, email, password} = formState;
@@ -72,7 +72,12 @@ const formulario:CustomForm = {
         
         </input>
 
-       
+       <button 
+       className="btn btn-primary mt-2 ms-2"
+       onClick={() => OnResetForm()}
+       >
+        
+        Reset</button>
 
 
     </>

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css';
 //import './index.css'
 //import { SimpleForm } from './02-UseEffect/SimpleForm'
-import { FormCustomHook } from './02-UseEffect/FormCustomHook';
+//import { FormCustomHook } from './02-UseEffect/FormCustomHook';
+import { MutipleCustomHooks } from './03-Examples/MutipleCustomHooks';
 //import { HooksApp } from './HooksApp.tsx'
 // import { CounterApp } from './01-UseState/CounterApp.tsx'
 // import { CounterCustomHook } from './01-UseState/CounterCustomHook.tsx'
@@ -22,7 +23,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
   {/* <SimpleForm></SimpleForm> */}
 
-  <FormCustomHook></FormCustomHook>,
+  {/* <FormCustomHook></FormCustomHook>, */}
+
+
+  <MutipleCustomHooks></MutipleCustomHooks>
    
    </React.StrictMode>,
    
