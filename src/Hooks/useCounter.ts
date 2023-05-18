@@ -6,8 +6,8 @@ type Retorno = {
 
 
     counter: number,
-    incrementar: (parametro:number)=> void,
-    decrementar: (parametro:number)=> void,
+    incrementar: (parametro?:number)=> void,
+    decrementar: (parametro?:number)=> void,
     reset: ()=> void
 }
 

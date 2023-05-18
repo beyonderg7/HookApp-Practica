@@ -1,16 +1,17 @@
 
 import { useCounter, useFetch} from "../Hooks";
-import { LoadingComponent } from "./LoadingComponent";
-import { QuoteBlock } from "./QuoteBlock";
+import { LoadingComponent } from "../03-Examples/LoadingComponent";
+import { QuoteBlock } from "../03-Examples/QuoteBlock";
 import {FC} from 'react'
 
- 
- export const MutipleCustomHooks:FC = () => {
+ export const Layout:FC = () => {
+
+
 
 
      const {incrementar, counter, reset} = useCounter(1);
 
-     const { data, isLoading, hasError} =  useFetch(`https://api.breakingbadquotes.xyz/v1/quotes/${counter}`);
+     const { data, isLoading} =  useFetch(`https://api.breakingbadquotes.xyz/v1/quotes/${counter}`);
 
 
     // Sintaxis permitida en JavaScrip PERO no permitida en TypeScript 
@@ -19,9 +20,6 @@ import {FC} from 'react'
     //  y al negar True se vuelve False.
 
     // const {quote, author} = !!data && data[0];
-
-
-    console.log({ data, isLoading, hasError} );
 
 
    return (
