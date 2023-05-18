@@ -22,7 +22,7 @@ import { useFetch } from "../Hooks/useFetch"
    return (
     <>
     
-        <h1>Breaking Bad Frases</h1>
+        <h1>Breaking Bad Frases34</h1>
          <hr></hr>
 
 
