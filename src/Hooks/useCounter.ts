@@ -18,33 +18,35 @@ export const useCounter = (initialValue: number = 10): Retorno => {
 const [counter, setCounter] = useState<number>(initialValue);
 
 
- const incrementar = (value:number = 1):void =>{
-    if(counter==30) {
+    const incrementar = (value:number = 1):void =>{
 
-        setCounter(initialValue);
-        return;
+        if(counter==30) {
+
+            setCounter(initialValue);
+            return;
+          }
+
+         setCounter(counter+value);
     }
 
-    setCounter(counter+value);
-}
 
+    const decrementar = (value:number = 1):void =>{
 
-const decrementar = (value:number = 1):void =>{
+         if(counter==0) {
 
-    if(counter==0) {
+            setCounter(initialValue);
+            return;
+          }
 
-        setCounter(initialValue);
-        return;
+         setCounter(counter-value);
     }
 
-    setCounter(counter-value);
-}
 
-const reset = ():void =>{
 
-    setCounter(initialValue);
-}
+    const reset = ():void =>{
 
+         setCounter(initialValue);
+    }
 
 
     return {
@@ -54,7 +56,6 @@ const reset = ():void =>{
         decrementar,
         reset: reset
     }
-        
-        
-        
+
+                       
 };

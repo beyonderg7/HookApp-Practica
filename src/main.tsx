@@ -8,6 +8,7 @@ import { MutipleCustomHooks } from './03-Examples/MutipleCustomHooks';
 import { FocusScreen } from './04-UseRef/FocusScreen';
 // import { Layout } from './05-LayoutEffect/Layout';
 import { Memorize } from './06-memos/Memorize';
+import { MemorizeHook } from './06-memos/MemorizeHook';
 //import { HooksApp } from './HooksApp.tsx'
 // import { CounterApp } from './01-UseState/CounterApp.tsx'
 // import { CounterCustomHook } from './01-UseState/CounterCustomHook.tsx'
@@ -15,7 +16,8 @@ import { Memorize } from './06-memos/Memorize';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 
-  <React.StrictMode>
+  
+<React.StrictMode>
 
   {/* <HooksApp  />
  
@@ -31,14 +33,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
   <MutipleCustomHooks></MutipleCustomHooks>
 
-  <FocusScreen></FocusScreen>
+   <FocusScreen></FocusScreen>
 
   {/* <Layout></Layout> */}
   
-   <Memorize></Memorize>
+    {/* <Memorize></Memorize>  */}
 
+  <MemorizeHook></MemorizeHook>
 
-   </React.StrictMode>,
-   
+</React.StrictMode>
 
 ) 
