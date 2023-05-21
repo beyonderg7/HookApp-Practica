@@ -18,6 +18,9 @@ const heaveyStuff = (iterationNumber: number = 100) =>
 export const MemorizeHook:FC = () => {
 
 
+
+  console.log('Me volvi a generar');
+
     const {counter, incrementar } = useCounter(4000)
 
     const [show, setshow] = useState(true);

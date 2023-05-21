@@ -9,6 +9,8 @@ import { FocusScreen } from './04-UseRef/FocusScreen';
 // import { Layout } from './05-LayoutEffect/Layout';
 //import { Memorize } from './06-memos/Memorize';
 import { MemorizeHook } from './06-memos/MemorizeHook';
+import { CallbackHook } from './06-memos/CallbackHook';
+import { Padre } from './07-tarea-memo/Padre';
 //import { HooksApp } from './HooksApp.tsx'
 // import { CounterApp } from './01-UseState/CounterApp.tsx'
 // import { CounterCustomHook } from './01-UseState/CounterCustomHook.tsx'
@@ -17,30 +19,34 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 
   
-<React.StrictMode>
 
-  {/* <HooksApp  />
+
+  // {/* <HooksApp  />
  
-  <CounterApp></CounterApp>
+  // <CounterApp></CounterApp>
 
-  <CounterCustomHook name='Super'></CounterCustomHook>
-  */}
+  // <CounterCustomHook name='Super'></CounterCustomHook>
+  // */}
 
-  {/* <SimpleForm></SimpleForm> */}
+  // {/* <SimpleForm></SimpleForm> */}
 
-  {/* <FormCustomHook></FormCustomHook>, */}
+  // {/* <FormCustomHook></FormCustomHook>, */}
 
 
-  <MutipleCustomHooks></MutipleCustomHooks>
+  // {/* <MutipleCustomHooks></MutipleCustomHooks> */}
 
-   <FocusScreen></FocusScreen>
+  //  {/* <FocusScreen></FocusScreen> */}
 
-  {/* <Layout></Layout> */}
+  // {/* <Layout></Layout> */}
   
-    {/* <Memorize></Memorize>  */}
+  //   {/* <Memorize></Memorize>  */}
 
-  <MemorizeHook></MemorizeHook>
+      // <MemorizeHook></MemorizeHook> 
 
-</React.StrictMode>
+  // {/* <CallbackHook></CallbackHook> */}
+
+  <Padre></Padre>
+
+
 
 ) 
