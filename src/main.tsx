@@ -15,6 +15,10 @@ import { Padre } from './07-tarea-memo/Padre';
 // import { CounterApp } from './01-UseState/CounterApp.tsx'
 // import { CounterCustomHook } from './01-UseState/CounterCustomHook.tsx'
 
+
+import { TodoApp } from './08-useReducer/TodoApp';
+
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 
@@ -45,7 +49,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
   // {/* <CallbackHook></CallbackHook> */}
 
-  <Padre></Padre>
+  // <Padre></Padre>
+
+  <TodoApp></TodoApp>
 
 
 

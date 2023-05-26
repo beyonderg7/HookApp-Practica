@@ -8,6 +8,8 @@ export const useForm = <T>(initialForm:T) => {
     
       const FormaBase:T = initialForm;
 
+
+
       const onInputChange = (event:React.ChangeEvent<HTMLInputElement>) =>{
 
         const  {value, name } = event.target;
@@ -18,7 +20,8 @@ export const useForm = <T>(initialForm:T) => {
                   [name]: value,
                });
                                 
-     }
+        }
+        
 
      const OnResetForm = ():void => {
 
