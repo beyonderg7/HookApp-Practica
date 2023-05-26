@@ -16,16 +16,20 @@ todo : {
         done: boolean
     },
 
-  funcBorrar: (parametro:todo) => void
+  funcBorrar: (parametro:todo) => void,
+  onTogleTodo: (parametro:todo) => void
   
 }
 
-export const TodoItem:FC<Datos> = ({todo, funcBorrar}) => {
+export const TodoItem:FC<Datos> = ({todo, funcBorrar, onTogleTodo}) => {
   return (
     
     <li className='list-group-item d-flex justify-content-between'>
 
-        <span className='aling-self-center'>{todo.descripcion}</span>
+        <span 
+        className={`aling-self-center ${ todo.done ? 'text-decoration-line-through' : ''}`}
+        onClick={() => onTogleTodo(todo)}
+        >{todo.descripcion}</span>
         <button 
         className='btn btn-danger'
         onClick={() => funcBorrar(todo)}

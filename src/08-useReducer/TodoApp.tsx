@@ -1,6 +1,6 @@
 
 import {FC, useEffect, useReducer, useState} from 'react';
-import { todoReducer } from './todoReducer';
+import { todoReducer } from './todoReducerV2';
  import { TodoList } from './todoList';
 import { TodoForm } from './TodoForm';
 
@@ -109,6 +109,18 @@ export const TodoApp:FC = () =>{
 
     }
 
+    const OnTogleTodo = (todo:todo) =>{
+    
+        const action:action = {
+
+            type: 'Togle Todo',
+            payload: todo
+        }
+
+    dispatch(action);
+
+    }
+
     
         return (
 
@@ -122,7 +134,12 @@ export const TodoApp:FC = () =>{
 
                         <div className="col-7">
 
-                              <TodoList state={state} FuncBorrar={(todo) => DeleteTodo(todo)}></TodoList>
+                              <TodoList 
+                              state={state} 
+                              FuncBorrar={(todo) => DeleteTodo(todo)}
+                              onTogleTodo={(todo) => OnTogleTodo(todo)}
+                              
+                              ></TodoList>
                              {/* <TodoList state={first}></TodoList> */}
                         </div>
                     

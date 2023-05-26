@@ -39,21 +39,21 @@ export const todoReducer = (initialState:Tipo1=init,action:action) => {
             
             case 'Togle Todo':
                
-                const todo = initialState.find((todo)=> todo.id == action.payload.id);
-                
-                const newTodo ={
+               return initialState.map( (todo) => {
 
-                    id: todo!.id,
-                    descripcion: todo!.descripcion,
-                    done: !todo!.done
+                    if(todo.id == action.payload.id){
 
-                }
-                
-                const FilterArray = initialState.filter((todo) => todo.id != action.payload.id);
+                        const newTodo:todo = {
+                            ...todo,
+                            done: !todo.done
+                        }
 
-                const NewArray = [...FilterArray,newTodo];
+                        return newTodo;
+                    }
 
-                return NewArray;
+                return todo;
+
+               });
 
 
             default:

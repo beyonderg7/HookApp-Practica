@@ -15,11 +15,12 @@ import { TodoItem } from './TodoItem'
     type Datos = {
 
         state: todo[],
-        FuncBorrar: (parametro:todo) => void
+        FuncBorrar: (parametro:todo) => void,
+        onTogleTodo: (parametro:todo) => void
     }
 
 
-export const TodoList:FC<Datos> = ({state, FuncBorrar}) => {
+export const TodoList:FC<Datos> = ({state, FuncBorrar, onTogleTodo}) => {
   return (
 
     <ul className='list-group'>
@@ -27,7 +28,13 @@ export const TodoList:FC<Datos> = ({state, FuncBorrar}) => {
 
        state.map( (todo:todo) => (
 
-               <TodoItem key={todo.id} todo={todo} funcBorrar={(todo)=> FuncBorrar(todo)}></TodoItem>
+               <TodoItem 
+               key={todo.id} 
+               todo={todo} 
+               funcBorrar={(todo)=> FuncBorrar(todo)}
+               onTogleTodo={(todo)=> onTogleTodo(todo) }
+               
+               ></TodoItem>
             )
         )
 
