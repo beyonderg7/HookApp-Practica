@@ -14,45 +14,82 @@ import { Padre } from './07-tarea-memo/Padre';
 //import { HooksApp } from './HooksApp.tsx'
 // import { CounterApp } from './01-UseState/CounterApp.tsx'
 // import { CounterCustomHook } from './01-UseState/CounterCustomHook.tsx'
-
-
 import { TodoApp } from './08-useReducer/TodoApp';
+import { MainApp } from './09-useContext/MainApp';
+
+import { createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
+import { LoginPage } from './09-useContext/LoginPage';
+import { HomePage } from './09-useContext/HomePage';
+import { AboutPage } from './09-useContext/AboutPage';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:  <MainApp></MainApp>,
+    children: [
+
+      {
+
+        path: "/login",
+        element: <LoginPage></LoginPage>
+      },
+
+      {
+
+        path: "/about",
+        element: <AboutPage></AboutPage>
+      },
+
+      {
+
+        path: "/",
+        element: <HomePage></HomePage>
+      },
+      
+      {
+
+        path: "/*",
+        element: <Navigate to={"/login"}></Navigate>
+      }
+    ]
+    
+  },
+]);
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 
   
-
-
-  // {/* <HooksApp  />
+  //  <HooksApp  />
  
-  // <CounterApp></CounterApp>
+  //  <CounterApp></CounterApp>
 
-  // <CounterCustomHook name='Super'></CounterCustomHook>
-  // */}
+  //  <CounterCustomHook name='Super'></CounterCustomHook>
 
-  // {/* <SimpleForm></SimpleForm> */}
+  //  <SimpleForm></SimpleForm>
 
-  // {/* <FormCustomHook></FormCustomHook>, */}
+  //  <FormCustomHook></FormCustomHook>
 
+  //  <MutipleCustomHooks></MutipleCustomHooks>
 
-  // {/* <MutipleCustomHooks></MutipleCustomHooks> */}
+  //  <FocusScreen></FocusScreen>
 
-  //  {/* <FocusScreen></FocusScreen> */}
-
-  // {/* <Layout></Layout> */}
+  //  <Layout></Layout> 
   
-  //   {/* <Memorize></Memorize>  */}
+  //  <Memorize></Memorize> 
 
-      // <MemorizeHook></MemorizeHook> 
+  //  <MemorizeHook></MemorizeHook> 
 
-  // {/* <CallbackHook></CallbackHook> */}
+  //  <CallbackHook></CallbackHook>
+  
+  //  <Padre></Padre>
 
-  // <Padre></Padre>
+  //  <TodoApp></TodoApp>
 
-  <TodoApp></TodoApp>
+  //  <MainApp></MainApp>
 
-
+  <RouterProvider router={router}/>
 
 ) 
