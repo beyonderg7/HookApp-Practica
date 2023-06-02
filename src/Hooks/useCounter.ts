@@ -26,7 +26,7 @@ const [counter, setCounter] = useState<number>(initialValue);
             return;
           }
 
-         setCounter(counter+value);
+         setCounter((current) => current+value);
     }
 
 
@@ -38,7 +38,7 @@ const [counter, setCounter] = useState<number>(initialValue);
             return;
           }
 
-         setCounter(counter-value);
+         setCounter((current) => current-value);
     }
 
 

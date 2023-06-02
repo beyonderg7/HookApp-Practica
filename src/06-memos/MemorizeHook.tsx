@@ -1,5 +1,5 @@
 
-import { useCounter } from "../Hooks"
+import { useCounter } from "../Hooks/useCounter"
 import {FC, useState, useMemo} from 'react'
 
 const heaveyStuff = (iterationNumber: number = 100) => 

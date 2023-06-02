@@ -1,11 +1,12 @@
 
-import { useCounter, useFetch} from "../Hooks";
+import { useFetch} from "../Hooks/useFetch";
+import { useCounter } from "../Hooks/useCounter";
 import { LoadingComponent } from "./LoadingComponent";
 import { QuoteBlock } from "./QuoteBlock";
 import {FC} from 'react'
 
  
- export const MutipleCustomHooks:FC = () => {
+ export const MultipleCustomHooks:FC = () => {
 
 
      const {incrementar, counter, reset} = useCounter(1);
@@ -21,7 +22,7 @@ import {FC} from 'react'
     // const {quote, author} = !!data && data[0];
 
 
-    console.log({ data, isLoading, hasError} );
+    console.log({ data, isLoading, hasError}, 'Holaaaa' );
 
 
    return (

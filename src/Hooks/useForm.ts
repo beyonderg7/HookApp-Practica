@@ -1,6 +1,17 @@
 import { useState } from "react"
 
 
+type Objeto = {
+    target: {
+
+        value: any
+        name: string
+    }
+}
+
+type Data = React.ChangeEvent<HTMLInputElement> | Objeto
+
+
 
 export const useForm = <T>(initialForm:T) => {
 
@@ -9,8 +20,7 @@ export const useForm = <T>(initialForm:T) => {
       const FormaBase:T = initialForm;
 
 
-
-      const onInputChange = (event:React.ChangeEvent<HTMLInputElement>) =>{
+      const onInputChange = (event:Data) =>{
 
         const  {value, name } = event.target;
     
@@ -35,9 +45,7 @@ export const useForm = <T>(initialForm:T) => {
 
 
     
-  return (
-
-        {
+  return (  {
 
             formState: formState,
             onInputChange: onInputChange,
@@ -45,7 +53,6 @@ export const useForm = <T>(initialForm:T) => {
 
 
         }
-
 
      )
 }

@@ -1,5 +1,6 @@
 
-import { useCounter, useFetch} from "../Hooks";
+import { useCounter} from "../Hooks/useCounter";
+import { useFetch } from "../Hooks/useFetch";
 import { LoadingComponent } from "../03-Examples/LoadingComponent";
 import { QuoteBlock } from "../03-Examples/QuoteBlock";
 import {FC} from 'react'

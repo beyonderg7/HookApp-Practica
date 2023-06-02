@@ -1,25 +1,23 @@
 import { useState, useEffect } from "react";
 
 
+type Data = {
+
+    author: string,
+    quote: string 
+     
+
+ }
+
+ type Datos = {
+
+     data: null | Array<Data>,
+     isLoading: boolean,
+     hasError: null,
+ }
 
 
-export const useFetch = (url:string) => {
-
-
-    type Data = {
-
-       author: string,
-       quote: string 
-        
-
-    }
-
-    type Datos = {
-
-        data: null | Array<Data>,
-        isLoading: boolean,
-        hasError: null,
-    }
+ export const useFetch = (url:string):Datos => {
 
 
     const Inicial:Datos = {
@@ -74,7 +72,10 @@ export const useFetch = (url:string) => {
 
     data: state.data,
     isLoading: state.isLoading,
-    hasError: state.hasError
+    hasError: state.hasError,
+
     
   });
 }
+
+
