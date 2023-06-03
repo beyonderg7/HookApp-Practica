@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import { HooksApp } from './HooksApp.tsx'
 //import { CounterApp } from './01-UseState/CounterApp.tsx'
 //import { CounterCustomHook } from './01-UseState/CounterCustomHook.tsx'
-import { TodoApp } from './08-useReducer/TodoApp';
+//import { TodoApp } from './08-useReducer/TodoApp';
 import { MainApp } from './09-useContext/MainApp';
 
 import { createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
@@ -26,7 +26,7 @@ import { AboutPage } from './09-useContext/AboutPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <TodoApp></TodoApp>  ,
+    element: <MainApp></MainApp>  ,
     children: [
 
       {

@@ -29,7 +29,7 @@ export const QuoteBlock:FC<Dato> = (elemento:Dato) => {
 
     const [boxSize, setboxSize] = useState<Box>(inicializador);
 
-    const pRef = useRef<HTMLInputElement>(null);
+    const pRef = useRef<HTMLParagraphElement>(null);
     
     useLayoutEffect(() => {
    
@@ -37,7 +37,7 @@ export const QuoteBlock:FC<Dato> = (elemento:Dato) => {
        
         setboxSize({height, width});
 
-        console.log('hola');
+        console.log('holaff');
 
       }, [elemento])
 

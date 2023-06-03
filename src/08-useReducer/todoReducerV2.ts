@@ -15,13 +15,22 @@ type action = {
 
     type:string,
     payload:todo
-}
+} | {
+
+    type:null,
+    payload:null
+} 
+
+
 
 const init:Tipo1 = [{
     id: 0,
-    descripcion: '',
+    descripcion: 'aloja perro',
     done: false
 }]
+
+
+
 
 
 export const todoReducer = (initialState:Tipo1=init,action:action) => {

@@ -22,7 +22,7 @@ import {FC} from 'react'
     // const {quote, author} = !!data && data[0];
 
 
-    console.log({ data, isLoading, hasError}, 'Holaaaa' );
+    console.log({ data, isLoading, hasError});
 
 
    return (

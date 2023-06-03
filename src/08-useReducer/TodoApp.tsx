@@ -3,7 +3,6 @@ import {FC} from 'react';
  import { TodoList } from './todoList';
 import { TodoForm } from './TodoForm';
 import { useTodos } from '../Hooks/useTodos';
-import { MultipleCustomHooks } from '../03-Examples/MultipleCustomHooks';
 
 
 type todo = {
