@@ -1,14 +1,14 @@
 import { createContext } from "react";
 
 
-type user = {
+ export type user = {
     
     id: number,
     name: string,
     email: string
 }
 
-type ContextType = {
+export type ContextType = {
 
     user: user
     setUser: (parametro:user) => void
@@ -30,4 +30,4 @@ const inicial:ContextType = {
 
 }
 
- export const UserContext = createContext<ContextType>(inicial);
+ export const UserContext = createContext<ContextType | null>(inicial);

@@ -26,9 +26,14 @@ import { AboutPage } from './09-useContext/AboutPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainApp></MainApp>  ,
+    element: <MainApp></MainApp>,
     children: [
 
+      {
+
+        path: "/",
+        element: <HomePage></HomePage>
+      },      
       {
 
         path: "/login",
@@ -40,13 +45,6 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutPage></AboutPage>
       },
-
-      {
-
-        path: "/",
-        element: <HomePage></HomePage>
-      },
-      
       {
 
         path: "/*",

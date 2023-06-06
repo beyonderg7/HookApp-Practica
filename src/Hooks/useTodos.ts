@@ -15,6 +15,19 @@ type todo = {
 
 type Tipo1 = todo[];
 
+
+type Retorno = {
+
+    state: Tipo1,
+    AgregarTodo: (parametro:todo) => void,
+    DeleteTodo: (parametro:todo) => void
+    OnTogleTodo: (parametro:todo) => void,
+    TodoCount: () => number,
+    PendingTodoCount: () => number
+
+}
+
+
 const initialState:Tipo1= [
 
     {
@@ -47,7 +60,7 @@ const initialStateParaElInit:Tipo1= [
 
 
 
-export const useTodos = () => {
+export const useTodos = ():Retorno => {
 
 
         const [state, dispatch] = useReducer(todoReducer,initialState, init)
@@ -108,7 +121,7 @@ export const useTodos = () => {
             }
 
          dispatch(action);
-
+            
         }
 
         const TodoCount = ()=> {

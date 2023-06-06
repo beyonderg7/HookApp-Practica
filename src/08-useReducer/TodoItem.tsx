@@ -10,7 +10,7 @@ type todo = {
 
 type Datos = {
     
-todo : {
+todo? : {
         id: number,
         descripcion: string,
         done: boolean
@@ -21,7 +21,14 @@ todo : {
   
 }
 
-export const TodoItem:FC<Datos> = ({todo, funcBorrar, onTogleTodo}) => {
+const init = {
+  id: 1,
+  descripcion: 'TODO PRO',
+  done: false
+}
+
+
+export const TodoItem:FC<Datos> = ({todo = init, funcBorrar, onTogleTodo}) => {
   return (
     
     <li className='list-group-item d-flex justify-content-between'>
@@ -29,6 +36,7 @@ export const TodoItem:FC<Datos> = ({todo, funcBorrar, onTogleTodo}) => {
         <span 
         className={`aling-self-center ${ todo.done ? 'text-decoration-line-through' : ''}`}
         onClick={() => onTogleTodo(todo)}
+        aria-label='span'
         >{todo.descripcion}</span>
         <button 
         className='btn btn-danger'

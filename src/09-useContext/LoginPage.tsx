@@ -3,8 +3,10 @@ import { UserContext } from './context/UserContext';
 
 export const LoginPage = () => {
 
-     const {user, setUser} =  useContext(UserContext);
+     const FuncX = () => {}
 
+     const user =  useContext(UserContext)?.user;
+     const setUser = useContext(UserContext)?.setUser || FuncX;
     // console.log(user);
 
 
@@ -15,7 +17,7 @@ export const LoginPage = () => {
         <hr></hr>
 
         
-        <pre>
+        <pre aria-label='pre'>
           {    JSON.stringify(user, null, 3)  }
         </pre>
 

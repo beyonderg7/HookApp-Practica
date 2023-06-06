@@ -33,7 +33,7 @@ const init:Tipo1 = [{
 
 
 
-export const todoReducer = (initialState:Tipo1=init,action:action) => {
+export const todoReducer = (initialState:Tipo1,action:action) => {
 
 
 
